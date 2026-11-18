@@ -1,0 +1,62 @@
+exp1
+S1) Create repo
+S2) cd desktop
+    mkdir gitlab_vishnu
+    cd gitlab_vishnu
+S3) git init
+S4) echo "hi, this is my first gitlab" > README.txt
+S5) git status
+S6) git remote add origin <url>
+S7) git add README.txt
+S8) git status
+S9) git commit -m "Initial commit"
+S10) git status
+exp2
+Create repo
+mkdir BranchExperiment
+cd BranchExperiment
+git init
+git remote add origin https://github.com
+Create initial file
+echo "Main project" > project.txt
+git add project.txt
+git commit -m "Initial project Commit"
+S1) git branch feature-branch
+S2) git branch
+S3) git switch feature-branch
+S4) echo "New features added" >> project.txt
+S5) git add project.txt
+    git commit -m "Add new feature"
+S6) git switch master
+S7) git merge feature-branch
+S8) git log --oneline --all
+exp3
+S1) Create repo
+    mkdir StashExperiment
+    cd StashExperiment
+    git init
+    Create file
+    echo "Original content" > file.txt
+    git add file.txt
+    git commit -m "Initial commit"
+S2) echo "Important new changes" >> file.txt
+    git status
+S3) git stash
+S4) git status
+S5) git switch -c feature-branch
+S6) git switch master
+S7) git stash list
+S8) git stash apply
+S9) cat file.txt
+exp4
+S1) git clone https://github.com/username/sample-project.git
+S2) cd sample-project
+S3) git remote -v
+S4) git status
+S5) ls
+exp5
+S1) cd sample-project
+S2) git branch
+S3) git fetch origin
+S4) git rebase origin/master
+S5) git log --oneline --graph --all
